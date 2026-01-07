@@ -1,17 +1,31 @@
 import React from "react";
-import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 import SearchBook from "./components/SearchBook";
 import UpdateBook from "./components/UpdateBook";
+import BookList from "./components/BookList";
+import Navbar from "./components/Navbar";
+import "./styles/App.css";
 
 function App() {
   return (
     <div className="container">
-      <h1>Online Bookstore</h1>
-      <AddBook />
-      <SearchBook />
-      <BookList />
-      <UpdateBook />
+      <Navbar />
+      
+      <section id="add">
+        <AddBook />
+      </section>
+      
+      <section id="search">
+        <SearchBook />
+      </section>
+      
+      <section id="update">
+        <UpdateBook />
+      </section>
+      
+      <section id="list">
+        <BookList />
+      </section>
     </div>
   );
 }
